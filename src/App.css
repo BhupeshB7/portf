@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-family: "JetBrains Mono",monospace;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+:root {
+  --primary-color: #060404;
+  --purple-color: #6f42c1;
+  --purple-color: #60498b;
+  --lightPurple-color: #f76be9;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  /* --light-color: #b791ff; */
+  --white-color: #fff;
+  --transparent-color: transparent;
+  --font-family: "Poppins", sans-serif;
+}
+body{
+  background: linear-gradient(to right, #000000, #222) !important;
+}
+/* Header css end */
+/* Home css */
+.home-right-side{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  max-width: 520px;
+  max-height: 520px;
+  /* margin:5px 20px; */
+  box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* media query for 560px to 768px */
+@media (min-width: 565px) and (max-width: 915px) {
+  .home-right-side{
+    width: 300px;
+    height: 300px;
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+@media (min-width: 281px) and (max-width: 561px) {
+  .home-right-side{
+    width: 320px;
+    height: 320px;
+    max-width: 400px;
+    max-height: 400px;
+    /* margin:0 10px;  */
+  }
+}
+.typewriter-text {
+  display: inline-block;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+}
+.download-cv-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+  border-radius: 1.375rem !important; /* Apply border-radius */
+  background-image: linear-gradient(var(--primary-color), var(--primary-color)), linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: gradientBorder 3s ease infinite;
+}
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.download-cv-button:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+.work-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-clip: border-box; /* Ensures the gradient is visible */
+  animation: rotateBorder 3s linear infinite; /* Apply the rotation animation */
+  width: 200px;
+  margin: auto;
+}
+
+@keyframes rotateBorder {
+  0% {
+    border-image-source: linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+  }
+  50% {
+    border-image-source: linear-gradient(to left, #3b82f6, #a855f7, #ec4899);
+  }
+  75% {
+    border-image-source: linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+  }
+  100% {
+    border-image-source: linear-gradient(to left, #3b82f6, #a855f7, #ec4899);
+  }
+}
+
+
+
+ ::wrbk-scroll-bar {
+  width: 0px;
+}

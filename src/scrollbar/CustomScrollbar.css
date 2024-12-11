@@ -1,0 +1,51 @@
+.custom-scroll-wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    scroll-snap-type: y mandatory; /* Enable snap scrolling */
+  }
+  
+  section {
+    scroll-snap-align: center; /* Snap sections to center */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .custom-scrollbar {
+    position: fixed;
+    right: 30px;
+    top: 50px;
+    bottom: 40px;
+    width: 6px;
+    background-color: #fff;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-scrollbar.show {
+    opacity: 1;
+  }
+  
+  .custom-scrollbar-thumb {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    border-radius: 4px;
+    transform: translateY(var(--thumb-position));
+    height: var(--thumb-height);
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
